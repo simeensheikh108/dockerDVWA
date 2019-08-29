@@ -14,7 +14,7 @@ COPY conf/* /tmp/
 RUN wget https://github.com/ethicalhack3r/DVWA/archive/v${VERSION}.tar.gz && \
     tar xvf /v${VERSION}.tar.gz && \
     mv -f /DVWA-${VERSION} /app && \
-    rm /app/.htaccess && \
+    
     chmod +x /tmp/setup_dvwa.sh && \
     /tmp/setup_dvwa.sh
 
