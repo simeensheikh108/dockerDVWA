@@ -18,7 +18,7 @@ pipeline{
 		    script {
     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
 
-        customImage = docker.build("simeensheikh/DVWA1")
+        customImage = docker.build("simeensheikh/dvwa1")
     }
     }
     }
@@ -29,7 +29,7 @@ pipeline{
 		    steps
 		    {
 			    script {
-				     aquaMicroscanner imageName: 'simeensheikh/DVWA1', notCompliesCmd: '', onDisallowed: 'ignore', outputFormat: 'html'
+				     aquaMicroscanner imageName: 'simeensheikh/dvwa1', notCompliesCmd: '', onDisallowed: 'ignore', outputFormat: 'html'
 			    }
 		    }
 	    }
